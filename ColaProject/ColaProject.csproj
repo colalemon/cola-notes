@@ -38,8 +38,12 @@
     <Content Include="CSSNotes\file控件美化.html" />
     <Content Include="JSNotes\jsnotes.js" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="AspNetNotes\" />
+    <Compile Include="AspNetNotes\AttributeStudy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
