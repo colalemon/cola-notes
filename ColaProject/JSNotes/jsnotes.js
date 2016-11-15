@@ -62,6 +62,38 @@ var _open = function (url) {
     $a.remove();
 }
 
+//1.名称
+//js深拷贝（对象）
+//2.思路
+//
+function deepCopy(source) {
+    var result = {};
+    for (var _key in source) {
+
+        result[_key] = typeof source[_key] === 'object' ? deepCopy(source[_key]) : source[_key];
+    }
+    return result;
+}
+
+//1.名称
+//js对象值比较
+//2.思路
+//
+function compereObj(obj1, obj2) {
+    var _paras1 = Object.getOwnPropertyNames(obj1);
+    var _paras2 = Object.getOwnPropertyNames(obj2);
+
+    if (_paras1.length != _paras2.length) {
+        return false;
+    }
+    for (var _i in _paras1) {
+        var _pname = _paras1[_i];
+
+        if (obj1[_pname] != obj2[_pname]) return false;
+    }
+    return true;
+
+}
 
 
 
